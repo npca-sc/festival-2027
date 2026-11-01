@@ -19,15 +19,6 @@ type FacilitySpot = MapRect & {
   kind: 'reception' | 'exit' | 'board';
 };
 
-type FlowPath = {
-  d: string;
-};
-
-const flowPaths: FlowPath[] = [
-  // 入口から右列展示を巡る
-  { d: 'M 22 83 L 22 28 L 22 58 L 22 83 L 56 83 L 56 28 L 56 58 L 56 83 L 90 83' },
-];
-
 const categoryColors: Record<string, string> = {
   'ゲーム': '#e74c3c',
   'VR': '#27ae60',
@@ -102,38 +93,6 @@ export function ExhibitMap() {
               </div>
             );
           })}
-
-          {/* Flow path (動線) */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <marker
-                id="arrowhead"
-                markerWidth="3"
-                markerHeight="3"
-                refX="1.5"
-                refY="1.5"
-                orient="auto"
-              >
-                <path d="M0,0 L3,1.5 L0,3 Z" fill="#7c3aed" />
-              </marker>
-            </defs>
-            {flowPaths.map((path, i) => (
-              <path
-                key={i}
-                d={path.d}
-                stroke="#7c3aed"
-                strokeWidth="0.8"
-                strokeDasharray="2 1.5"
-                fill="none"
-                markerEnd="url(#arrowhead)"
-                opacity="0.6"
-              />
-            ))}
-          </svg>
 
           {/* Exhibit spots */}
           {exhibitSpots.map((spot) => {
@@ -218,11 +177,6 @@ export function ExhibitMap() {
             {cat}
           </div>
         ))}
-        <span className="text-ink-300">|</span>
-        <div className="flex items-center gap-1.5">
-          <span className="inline-block w-4 h-0 border-t-2 border-dashed" style={{ borderColor: '#7c3aed' }} />
-          動線
-        </div>
         <span className="text-ink-300">|</span>
         {Object.entries(facilityStyles).map(([kind, style]) => (
           <div key={kind} className="flex items-center gap-1.5">
