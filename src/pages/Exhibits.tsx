@@ -16,7 +16,7 @@ export function Exhibits() {
       </h1>
 
       <p className="text-ink-700 leading-relaxed mb-8">
-        PC研究部室でゲームやAI、Webアプリなど様々な展示を行っています！
+        ブースでゲームやAI、Webアプリなど様々な展示を行っています！
         各展示の詳細は各ページをご覧ください。
       </p>
 

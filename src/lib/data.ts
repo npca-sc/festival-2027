@@ -384,24 +384,6 @@ export const events: EventItem[] = [
     description: '高校1年の部員が、Free Wi-Fiの通信やWebのログインシステムの脆弱性について解説します。',
     grade: '高1部員',
   },
-  {
-    id: '3',
-    title: 'AI対戦大会',
-    date: '11/3 のみ',
-    time: '13:00 - 14:00',
-    location: 'PC研究部室',
-    description: '部員が開発したオセロAIと来場者が対戦する大会。優勝者には景品をお渡しします！',
-    grade: '全学年',
-  },
-  {
-    id: '4',
-    title: 'タイピング大会',
-    date: '11/3 のみ',
-    time: '14:30 - 15:30',
-    location: 'PC研究部室',
-    description: 'Code Rushでタイピングスピードを競います。部員が書いたコードが問題として出題されます。',
-    grade: '全学年',
-  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

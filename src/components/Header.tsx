@@ -21,7 +21,7 @@ export function Header() {
         <nav className="max-w-3xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between">
           <div className="flex w-full items-center justify-between gap-4">
             <Link to="/" className="text-ink-900 font-bold text-sm hover:no-underline">
-              灘校パソコン研究部 文化祭2027特設サイト
+              灘校パソコン研究部 2027年度文化祭特設サイト
             </Link>
 
             <button

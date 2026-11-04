@@ -11,9 +11,7 @@ export function Navigation() {
       <section className="mb-8">
         <h2 className="text-xl font-bold text-ink-900 mb-2">場所</h2>
         <p className="text-ink-700 leading-relaxed">
-          パソコン部の展示はPC研究部室で行われています。
-          <br />
-          パソコン解体やハッキング実演などのイベントも同室で行われます。
+          パソコン部の展示はH3-2教室で行われています。
         </p>
       </section>
 
