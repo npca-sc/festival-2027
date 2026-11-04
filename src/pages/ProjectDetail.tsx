@@ -55,14 +55,6 @@ export function ProjectDetail() {
         {project.title}
       </h1>
 
-      {project.imageUrl && (
-        <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="w-full h-64 object-cover rounded mb-8"
-        />
-      )}
-
       <section className="mb-8">
         <h2 className="text-xl font-bold text-ink-900 mb-3">展示について</h2>
         <p className="text-ink-700 leading-relaxed">
@@ -117,20 +109,11 @@ export function ProjectDetail() {
                 to={`/exhibits/${p.slug}`}
                 className="block group hover:no-underline"
               >
-                <div className="flex items-center gap-3 py-2 border-b border-ink-100">
-                  {p.imageUrl && (
-                    <img
-                      src={p.imageUrl}
-                      alt={p.title}
-                      className="w-16 h-16 object-cover rounded flex-shrink-0"
-                    />
-                  )}
-                  <div>
+                <div className="py-2 border-b border-ink-100">
                     <div className="font-bold text-ink-900 group-hover:text-blue-600">
                       {p.title}
                     </div>
                     <div className="text-sm text-ink-500 line-clamp-1">{p.description}</div>
-                  </div>
                 </div>
               </Link>
             ))}

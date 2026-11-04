@@ -46,15 +46,7 @@ export function Exhibits() {
               to={`/exhibits/${project.slug}`}
               className="block group hover:no-underline"
             >
-              <div className="flex flex-col sm:flex-row gap-4 pb-6 border-b border-ink-100">
-                {project.imageUrl && (
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full sm:w-48 h-32 object-cover rounded"
-                  />
-                )}
-                <div className="flex-1">
+              <div className="pb-6 border-b border-ink-100">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-xs font-mono text-ink-400">No. {project.sortOrder}</span>
                     <span className="text-xs text-ink-500 bg-ink-100 px-2 py-0.5 rounded">
@@ -80,7 +72,6 @@ export function Exhibits() {
                       </span>
                     ))}
                   </div>
-                </div>
               </div>
             </Link>
           ))}
