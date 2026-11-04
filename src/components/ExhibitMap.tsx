@@ -148,20 +148,6 @@ export function ExhibitMap() {
               </div>
             );
           }
-          const facility = facilitySpots.find((s) => s.id === hovered);
-          if (facility) {
-            return (
-              <div
-                className="absolute z-20 pointer-events-none bg-ink-900 text-white text-sm rounded-lg px-3 py-2 shadow-xl whitespace-nowrap"
-                style={{
-                  left: `${Math.min(facility.x + facility.w / 2, 70)}%`,
-                  top: `${Math.max(facility.y - 4, 0)}%`,
-                }}
-              >
-                <div className="font-bold">{facility.label}</div>
-              </div>
-            );
-          }
           return null;
         })()}
       </div>
